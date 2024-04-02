@@ -7,7 +7,7 @@ type CourseGoalProps = {
 
 const CourseGoal: React.FC<CourseGoalProps> = ({ title, children }) => {
   return (
-    <article className=" text-white p-4 rounded-lg mt-4">
+    <article className=" text-white rounded-lg mt-4">
       <div className="my-2">
         <h2>{title}</h2>
         <p>{children}</p>
