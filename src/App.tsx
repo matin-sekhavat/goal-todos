@@ -1,7 +1,5 @@
-import React from "react";
-
 function App() {
-  return <div>App</div>;
+  return <div>test file</div>;
 }
 
 export default App;
