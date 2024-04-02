@@ -11,6 +11,7 @@ export type CourseGoalType = {
 const App = () => {
   const [goals, setGoals] = useState<CourseGoalType[]>([]);
 
+  //handle Add goals
   function handleAddGoals() {
     const newGoal: CourseGoalType = {
       id: Math.random(),
@@ -18,6 +19,11 @@ const App = () => {
       desc: `Description of the goal ${Math.floor(Math.random() * 10000)}`,
     };
     setGoals((allGoals) => [...allGoals, newGoal]);
+  }
+  // handle Delete Goals
+  function handleDeleteGoal(id: number) {
+    const deletedGoals = goals.filter((goal) => goal.id !== id);
+    setGoals(deletedGoals);
   }
   return (
     <main className="min-h-dvh flex justify-center bg-stone-200 ">
@@ -28,7 +34,7 @@ const App = () => {
           </p>
         </Header>
         <button onClick={handleAddGoals}>ADD Goals</button>
-        <CourseGoalList goals={goals} />
+        <CourseGoalList goals={goals} onDeleteGoal={handleDeleteGoal} />
       </div>
     </main>
   );
