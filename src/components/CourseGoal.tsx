@@ -16,7 +16,7 @@ const CourseGoal: React.FC<CourseGoalProps> = ({
   return (
     <article className=" text-white rounded-lg mt-4 bg-gray-700 p-2 flex items-start justify-between gap-2">
       <div className="my-2">
-        <h2>{title}</h2>
+        <h2 className="text-2xl font-bold text-rose-400">{title}</h2>
         <p>{children}</p>
       </div>
       <button className="text-stone-200" onClick={() => onDeleteGoal(id)}>

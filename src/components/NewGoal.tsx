@@ -32,16 +32,18 @@ function NewGoal({ handleAddGoals }: NewGoalProps) {
         name="title"
         onChange={handleInputFields}
         inputName="goal-title"
+        value={query.title}
       />
       <FormInput
         label="Goal Description"
         name="desc"
         onChange={handleInputFields}
         inputName="goal-description"
+        value={query.desc}
       />
 
       <div>
-        <button className=" my-4 border-2 border-stone-500 p-2 rounded-md hover:bg-stone-500 transition-all duration-200">
+        <button className=" my-4 border-2 border-stone-500 p-2 rounded-md hover:bg-stone-500 transition-all duration-200 text-white">
           Add New Goal
         </button>
       </div>
