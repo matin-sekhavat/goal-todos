@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { CourseGoalType } from "../App";
+import FormInput from "./FormInput";
 
 type NewGoalProps = {
   handleAddGoals: (newGoal: CourseGoalType) => void;
@@ -15,6 +16,7 @@ function NewGoal({ handleAddGoals }: NewGoalProps) {
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e?.preventDefault();
     handleAddGoals(query);
+    setQuery({ title: "", desc: "", id: 0 });
   }
 
   function handleInputFields(e: React.ChangeEvent<HTMLInputElement>) {
@@ -25,30 +27,19 @@ function NewGoal({ handleAddGoals }: NewGoalProps) {
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col caret-slate-600  ">
-      <div className="flex flex-col mt-2">
-        <label htmlFor="goal-title" className="text-white">
-          Your Goal
-        </label>
-        <input
-          type="text"
-          id="goal-title"
-          onChange={handleInputFields}
-          name="title"
-          className="p-2 rounded-md outline-none focus:ring-4 focus:ring-slate-600"
-        />
-      </div>
-      <div className="flex flex-col mt-2">
-        <label htmlFor="goal-summary" className="text-white">
-          short Summary
-        </label>
-        <input
-          type="text"
-          id="goal-summary"
-          onChange={handleInputFields}
-          name="desc"
-          className="p-2 rounded-md outline-none focus:ring-4 focus:ring-slate-600"
-        />
-      </div>
+      <FormInput
+        label="Your Goal"
+        name="title"
+        onChange={handleInputFields}
+        inputName="goal-title"
+      />
+      <FormInput
+        label="Goal Description"
+        name="desc"
+        onChange={handleInputFields}
+        inputName="goal-description"
+      />
+
       <div>
         <button className=" my-4 border-2 border-stone-500 p-2 rounded-md hover:bg-stone-500 transition-all duration-200">
           Add New Goal
