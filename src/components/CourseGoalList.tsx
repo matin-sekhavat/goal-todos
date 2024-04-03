@@ -8,7 +8,7 @@ type CourseGoalListProps = {
 
 function CourseGoalList({ goals, onDeleteGoal }: CourseGoalListProps) {
   return (
-    <ul className="grid grid-cols-2 gap-2">
+    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
       {goals.map((goal) => (
         <li key={goal.id}>
           <CourseGoal
