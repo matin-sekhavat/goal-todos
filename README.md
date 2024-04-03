@@ -2,6 +2,8 @@
 
 so this project is all about simple Typescript Todolists that users can **add** and **delete** their goals.This project is only for improving my typescript Fundamental.
 
+in This project i'm using react-typescript and tailwindcss
+
 ## how to run this Project?
 
 so for run this project you can clone this project in your code editor or you can simply download the Zip file.
