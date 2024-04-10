@@ -15,6 +15,7 @@ function NewGoal({ handleAddGoals }: NewGoalProps) {
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e?.preventDefault();
+    if (!query.title || !query.desc) return null;
     handleAddGoals(query);
     setQuery({ title: "", desc: "", id: 0 });
   }
