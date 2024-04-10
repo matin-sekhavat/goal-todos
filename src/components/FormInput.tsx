@@ -25,7 +25,7 @@ function FormInput({
         id={inputName}
         onChange={onChange}
         name={name}
-        className="p-2 rounded-md outline-none focus:ring-4 focus:ring-slate-600"
+        className="p-2 rounded-md outline-none focus:ring-4 focus:ring-slate-600 bg-slate-300"
         value={value}
       />
     </div>

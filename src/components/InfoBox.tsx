@@ -10,9 +10,9 @@ type asideStylesProps = {
   warn: string;
 };
 const asideStyles: asideStylesProps = {
-  base: "p-4 my-2 rounded-md",
-  hint: "bg-green-200",
-  warn: "bg-red-200",
+  base: "p-4 my-2 rounded-md ",
+  hint: "border border-green-400 text-green-400",
+  warn: "border border-orange-400 text-orange-400",
 };
 function InfoBox({ children, mode }: InfoBoxProps) {
   // flexible component also include warning
@@ -27,7 +27,9 @@ function InfoBox({ children, mode }: InfoBoxProps) {
   return (
     <aside className={`${asideStyles.base} ${asideStyles[mode]}`}>
       {mode === "warn" ? (
-        <p className="text-center text-xl mb-2 font-bold text-red-700">Warn</p>
+        <p className="text-center text-xl mb-2 font-bold text-orange-400">
+          Warn
+        </p>
       ) : null}
       <p>{children}</p>
     </aside>

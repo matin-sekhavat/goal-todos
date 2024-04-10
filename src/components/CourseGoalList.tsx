@@ -13,7 +13,7 @@ function CourseGoalList({ goals, onDeleteGoal }: CourseGoalListProps) {
   }
   return (
     <>
-      {goals.length > 4 && (
+      {goals.length >= 4 && (
         <InfoBox mode="warn">
           you are collecting a lot of Goals . don't push any more
         </InfoBox>

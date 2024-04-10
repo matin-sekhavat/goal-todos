@@ -44,7 +44,7 @@ function NewGoal({ handleAddGoals }: NewGoalProps) {
       />
 
       <div>
-        <button className=" my-4 border-2 border-stone-500 p-2 rounded-md hover:bg-stone-500 transition-all duration-200 text-white">
+        <button className=" my-4 p-2 rounded-md w-full bg-amber-300 text-black font-bold">
           Add New Goal
         </button>
       </div>
